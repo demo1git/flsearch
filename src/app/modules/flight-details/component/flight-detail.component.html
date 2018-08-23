@@ -1,0 +1,30 @@
+<div *ngIf="flightDetail">
+  <div class="card" *ngFor="let data of flightDetail">
+    <ul >
+        <li class="takeoff col-1" style="">
+            <img src="/assets/images/takeoff.png" alt="">
+        </li>
+        <li class="col-2" style="">{{data.airline}}
+            <div>
+                <small>{{data.code}}</small>
+            </div>
+        </li>
+        <li class="col-2" style="">{{ data.arvl | date:"HH:mm"}}
+            <div>
+                <small>{{data.origin}}</small>
+            </div>
+        </li>
+        <li class="col-2" style="">{{ data.dept | date:"HH:mm"}}
+            <div>
+                <small>{{data.destination}}</small>
+            </div>
+        </li>
+        <li  class="price col-2" style=""><i class="fa fa-rupee"></i> {{ data.fare}}</li>
+        <li class="bookBtn row">
+            <input type="button" value="Book" />
+        </li>
+    </ul>
+  </div>
+</div>
+
+
